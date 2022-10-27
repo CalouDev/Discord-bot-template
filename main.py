@@ -12,14 +12,14 @@ from bs4 import BeautifulSoup
 #---------------------------------------------------BOT-------------------------------------------------------------------------------
 
 # set the bot
-bot = commands.Bot(command_prefix='/', description="Bot pour démonstration")
+bot = commands.Bot(command_prefix='/', description="Template Bot")
 
 # To know where the bot is launched
 @bot.event
 async def on_ready():
     print("Bot ready !")
 
-# Créer la commande definition (exemple: /definition coder)
+# Make the "definition" command
 @bot.command()
 async def definition(ctx, mot):
     url = "https://www.le-dictionnaire.com/definition/{}".format(mot) 
